@@ -1,1 +1,709 @@
 
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-size: 1rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:  "游ゴシック","ヒラギノ角ゴ ProN W3", "HiraKakuProN-W3",  "Yu Gothic", "メイリオ", "Meiryo", Verdana, Helvetica, Arial, sans-serif;
+    width: 100%;
+
+}
+
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
+
+
+/* ヘッダー */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 15%;
+
+    transition: .2s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0 4px 8px -3px rgba(17, 17, 17, .06);
+    z-index: 199999;
+}
+
+.head-animation {
+    transform: translateY(-100%);
+  }
+
+.header img{
+    width: 40px;
+    vertical-align: middle;
+
+}
+
+.header nav{
+    margin-left: auto;
+}
+
+.header ul{
+    display: flex;
+    height: 100%;
+}
+
+.header li{
+    list-style: none;
+    height: 100%;
+}
+
+.header a{
+    height: 100%;
+    font-size: 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+    line-height: 70px;
+    padding: 0 15px;
+
+
+
+}
+
+.header ul a:hover{
+    color: #000;
+    background-color: #ffffff8a;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.4s 0s ease;
+}
+
+
+
+/* コンテンツ */
+#top,#intro,#work,#skill,#profile{
+    width: 100%;
+}
+
+/* top */
+#top{
+    background-color: #151b30;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top{
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+.top h1{
+    font-size: 4rem;
+}
+
+
+/* ボタン */
+
+.pulse{
+    margin: 40px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #1d8cd1;
+    box-shadow: 0 3px 30px #0169a9;
+    cursor: pointer;
+    transition: 0.8s ;
+}
+.pulse:hover{
+    box-shadow: none;
+    transform: scale(1.1);
+    box-shadow: 0 5px 100px #0066a5;
+    background-color: #1f92d9;
+}
+
+.pulse:active{
+    background-color: #009dff;
+    transform: translateY(5px);
+    transition: 0.2s ;
+    box-shadow: 0 5px 50px #1288d1;
+}
+
+
+.pulse a{
+    text-decoration-line: none;
+    font-size: 1.1rem;
+}
+
+.button{
+    color: #fff;
+}
+
+
+.pulse::before, .pulse::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+    border: 1px solid #1da1f2;
+    border-radius: 50px;
+    box-sizing: border-box;
+    pointer-events: none;
+    animation: pulsate 2s linear infinite;
+}
+.pulse::after {
+    animation-delay: 1s;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+/* intro  */
+#intro{
+    background-color: rgba(212, 212, 212, 0.519);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro{
+    margin: auto;
+    padding: 10%;
+
+}
+
+.me{
+    display: flex;
+    justify-content: space-between;
+}
+
+#intro img{
+    border-radius: 50%;
+    width: 100%;
+
+}
+
+.photo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    margin: auto 8%;
+}
+
+
+.intro-text{
+    margin: 3% 3% 3% 0;
+    width:70%;
+
+}
+
+
+.intro-text ul{
+    list-style: none;
+}
+
+
+
+
+
+
+/* work  */
+#work{
+    background-color: #eff3f774;
+
+}
+.work{
+    width: 90%;
+    margin: auto;
+    padding: 5%;
+}
+.work p{
+    text-align: center;
+}
+
+.product {
+    width: 40%;
+    padding: 5%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.product p{
+    margin-top: 25px;
+}
+.product img{
+    width: 100%;
+    transition: all 1s;
+    margin-top: 20px;
+
+}
+.product img:hover{
+    transform: scale(1.2,1.2);
+    transition: all 0.7s;
+    box-shadow: 0 0 5px #868686;
+}
+.product img:active{
+    transform: scale(1.4,1.4);
+    transition: all 0.5s;
+    box-shadow: 0 0 5px #868686;
+}
+
+
+.work ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* skill  */
+#skill{
+    background-color: #d3dde374;
+
+}
+.skill{
+    max-width: 600px;
+    margin: auto;
+    padding: 10%;
+    text-align: center;
+}
+
+.skill p{
+    padding: 10%;
+
+}
+
+
+
+/* profile  */
+#profile{
+    background-color: #c0e0ee88;
+
+}
+
+.profile{
+    max-width: 700px;
+    margin: auto;
+    padding: 5%;
+}
+
+.discription{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.container {
+    position: relative;
+}
+.grid {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.grid span {
+    border-right: 5px solid rgb(90, 99, 103);
+    height: 100%;
+    width: 30%;
+}
+
+#profile .his{
+    display: flex;
+    width: 100%;
+    margin-bottom: 100px;
+
+}
+
+#profile .left{
+    width: 35%;
+    margin-top: 75px;
+}
+#profile .left p{
+    font-size: 0.8rem;
+}
+#profile .right{
+    width: 65%;
+}
+
+#profile img{
+    width:40%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 5% 0;
+}
+
+#profile .comment{
+    padding: 7%;
+    background-color: #ffffffd6;
+}
+
+#profile .comment h3{
+    font-size: 1.5rem;
+}
+#profile .comment p{
+    margin-top: 5%;
+}
+
+
+
+
+
+
+/* contact  */
+
+#contact{
+    background-color: #ccdee65d;
+    padding: 5%;
+}
+
+.contact{
+    max-width: 600px;
+    margin: auto;
+}
+
+#contact p{
+    text-align: left;
+    margin: 5% auto 8% auto;
+    max-width: 400px;
+}
+
+
+#contact dl{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#contact dt{
+    width: 20%;
+    margin-right: 10px;
+    margin-bottom: 0;
+    line-height: 1rem;
+}
+
+#contact label{
+    font-size: 0.8rem;
+}
+
+#contact dd{
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+
+#contact dd input,
+#contact dd textarea{
+    width: 100%;
+    border: 1px solid #c8c8c8;
+    padding: 10px;
+}
+
+#contact textarea{
+    height: 10rem;
+}
+
+#contact .button{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#contact .button input[type="submit"]{
+    background-color: #519fee;
+    border: 1.5px solid #519fee;
+    color: #fff;
+    width: 150px;
+    padding: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 10px 40px 30px 40px;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 #0169a9;
+    cursor: pointer;
+}
+
+#contact .button input:hover{
+    background-color: #fff;
+    box-shadow: none;
+    transform: scale(0.95);
+    box-shadow: 0 3px 5px #0066a5;
+    background-color: #1c9ded;
+}
+
+#contact .button input:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+
+
+
+
+
+/* thank  */
+#thank{
+    background-color: #a3cce567;
+
+}
+
+.thank{
+    margin: auto;
+    padding: 15% 0 ;
+}
+
+
+
+
+
+
+
+
+footer{
+    font-size: 0.8rem;
+    background-color: rgba(21, 27, 48, 1);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+
+}
+
+
+
+
+
+
+@media screen and (max-width:700px){
+
+    /* hedder  */
+
+    .header{
+        padding: 0;
+    }
+    .header ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo{
+        position: fixed;
+        top: 14px;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+    }
+
+
+    /* ハンバーガー　 */
+
+    .header nav{
+        width: 60%;
+        display: block;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        bottom: 0;
+        z-index: 3;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+    }
+
+    .header li{
+        height: 80px;
+    }
+
+    .header nav a{
+        padding: 0;
+        margin: 0;
+        display: block;
+        text-align: center;
+        /* text-indent: 40%; */
+        /* padding-left: 40%; */
+        transition: all 0.5s;
+        line-height: 80px;
+
+    }
+
+
+    /* toggle  クリック前*/
+
+    .nav_toggle {
+        width: 3rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav_area{
+        margin: auto;
+        display: block;
+        position: relative;
+        width: 1.75rem;
+        height: 1.5rem;
+
+      }
+
+
+      .nav_toggle i {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        transition: transform .5s, opacity .5s;
+      }
+      .nav_toggle i:nth-child(1) {
+        top: 0;
+      }
+      .nav_toggle i:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .nav_toggle i:nth-child(3) {
+        bottom: 0;
+      }
+
+
+      /* toggle  クリック後*/
+      .nav_toggle.show i:nth-child(1) {
+        transform: translateY(10px) rotate(-45deg);
+      }
+      .nav_toggle.show i:nth-child(2) {
+        opacity: 0;
+      }
+      .nav_toggle.show i:nth-child(3) {
+        transform: translateY(-12px) rotate(45deg);
+      }
+
+      /* サイドバー表示 */
+      .nav.show {
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+        background-color: #000000e7;
+      }
+
+
+
+
+
+
+    /* top  */
+    .top .pulse{
+        margin-top: 20%;
+    }
+
+    /* intro  */
+
+    .me{
+        flex-direction: column;
+        margin-top: 30px;
+        padding: 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .intro-text{
+        padding: 5%;
+        width: 100%;
+    }
+
+    .photo{
+        width: 50%;
+        align-items: center;
+    }
+
+    .photo picture{
+        width: 50%;
+    }
+
+
+
+    /* work  */
+    .product {
+        width: 100%;
+    }
+    .product img:hover{
+        transform: scale(1.1,1.1);
+    }
+    .product img:active{
+        transform: scale(1.2,1.2);
+    }
+
+    /* profile  */
+    #profile .comment h3{
+        font-size: 1.1rem;
+    }
+    #profile .left{
+        margin-top: 28px;
+    }
+
+
+
+    /* contact  */
+    #contact{
+        padding: 10% 5%;
+    }
+    .contact{
+        width: 100%;
+    }
+
+    .contat dl{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contact dt{
+        width: 100%;
+    }
+
+
+
+
+
+}
+
