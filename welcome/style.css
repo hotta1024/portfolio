@@ -114,6 +114,45 @@ h2{
     font-size: 4rem;
 }
 
+.top h1{
+    animation-name:fadeLeftAnime;
+    animation-delay: 0s;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+
+    @keyframes fadeLeftAnime{
+      from {
+        opacity: 0;
+      transform: translateX(-100px);
+      }
+
+      to {
+        opacity: 1;
+      transform: translateX(0);
+      }
+    }
+
+.top p{
+    animation-name:fadeUpAnime;
+    animation-delay: 0.5s;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+
+    @keyframes fadeUpAnime{
+        from {
+        opacity: 0;
+        transform: translateY(100px);
+        }
+
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
 
 /* ボタン */
 
@@ -123,45 +162,61 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 50px;
+    width: 160px;
+    height:50px;
     border-radius: 50px;
-    background-color: #1d8cd1;
-    box-shadow: 0 3px 30px #0169a9;
+    background-color: #009dff;
+    box-shadow: 0 0px 100px #52bdff;
     cursor: pointer;
     transition: 0.8s ;
+
+    animation:fadeUpAnime 0.7s ease-out 1s forwards alternate;
+    opacity:0;
 }
+
+@keyframes fadeUpAnime{
+        from {
+        opacity: 0;
+        transform: translateY(100px);
+        }
+
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+}
+
 .pulse:hover{
     box-shadow: none;
-    transform: scale(1.1);
-    box-shadow: 0 5px 100px #0066a5;
-    background-color: #1f92d9;
+    transform: scale(1.2);
+    box-shadow: 0 5px 100px #1da8ff;
+    background-color: #009dff;
 }
 
 .pulse:active{
     background-color: #009dff;
     transform: translateY(3px);
     transition: 0.2s ;
-    box-shadow: 0 5px 50px #1288d1;
-}
-
-
-.pulse a{
-    text-decoration-line: none;
-    font-size: 1.1rem;
+    box-shadow: 0 5px 50px #14a5ff;
 }
 
 .button{
     color: #fff;
-    width: 150px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     border-radius: 50px;
     display: block;
     line-height: 50px;
+    text-decoration-line: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index: 10;
+    border: 1px solid #0fa3ff74;
 }
 
 
 .pulse::before, .pulse::after{
+    z-index: 1;
     content: "";
     display: block;
     position: absolute;
@@ -170,10 +225,11 @@ h2{
     left: 0;
     right: 0;
     margin: auto;
-    width: 90%;
+    width: 100%;
     height: 100%;
-    border: 1px solid #1da1f2;
-    border-radius: 50px;
+    border: 1px solid #009dff60;
+    background-color: #009dff47;
+    border-radius:50px;
     box-sizing: border-box;
     pointer-events: none;
     animation: pulsate 2s linear infinite;
@@ -189,7 +245,7 @@ h2{
     }
 
     100% {
-        transform: scale(2);
+        transform: scale(1.75,2);
         opacity: 0;
     }
 }
@@ -321,21 +377,17 @@ h2{
 
 /* profile  */
 #profile{
-    background-color: #c0e0ee88;
-
+    background-color: #ecfaff41;
 }
-
 .profile{
     max-width: 700px;
     margin: auto;
     padding: 5%;
 }
-
 .discription{
     text-align: center;
     margin-bottom: 50px;
 }
-
 .container {
     position: relative;
 }
@@ -346,7 +398,7 @@ h2{
     width: 100%;
 }
 .grid span {
-    border-right: 5px solid rgb(90, 99, 103);
+    border-right: 1px solid rgb(90, 99, 103);
     height: 100%;
     width: 30%;
 }
@@ -361,12 +413,14 @@ h2{
 #profile .left{
     width: 35%;
     margin-top: 75px;
+    text-align: center;
 }
 #profile .left p{
     font-size: 0.8rem;
 }
 #profile .right{
     width: 65%;
+    text-align: center;
 }
 
 #profile img{
@@ -375,11 +429,15 @@ h2{
     object-fit: cover;
     border-radius: 50%;
     margin: 5% 0;
+    border: 1px solid #000;
 }
 
 #profile .comment{
     padding: 7%;
-    background-color: #ffffffd6;
+    background-color: #ffffffce;
+    color: #000;
+    border: 1px solid rgba(90, 99, 103, 0.759);
+    text-align: left;
 }
 
 #profile .comment h3{
@@ -450,6 +508,7 @@ h2{
 #contact .button{
     text-align: center;
     margin-top: 10px;
+    font-size: 1.2rem;
 }
 
 #contact .button input[type="submit"]{
@@ -491,8 +550,9 @@ h2{
 }
 
 .thank{
+    text-align: center;
     margin: auto;
-    padding: 15% 0 ;
+    padding: 15%;
 }
 
 
@@ -518,10 +578,16 @@ footer{
 
 @media screen and (max-width:700px){
 
+
+    h2{
+        font-size: 2.2rem;
+    }
+
     /* hedder  */
 
     .header{
         padding: 0;
+        height: 55px;
     }
     .header ul{
         display: flex;
@@ -530,7 +596,7 @@ footer{
 
     .logo{
         position: fixed;
-        top: 14px;
+        top: 7px;
         left: 0;
         right: 0;
         margin: auto;
@@ -544,7 +610,7 @@ footer{
         width: 60%;
         display: block;
         position: fixed;
-        top: 70px;
+        top: 55px;
         left: -100%;
         bottom: 0;
         z-index: 3;
@@ -594,7 +660,7 @@ footer{
         display: block;
         width: 100%;
         height: 2px;
-        background-color: #333;
+        background-color: #ffffff;
         position: absolute;
         transition: transform .5s, opacity .5s;
       }
@@ -637,8 +703,13 @@ footer{
 
     /* top  */
     .top .pulse{
-        margin-top: 20%;
+        margin-top: 10%;
     }
+    .top .pulse,.top p{
+        margin-bottom: 60px;
+    }
+
+
 
     /* intro  */
 
@@ -662,10 +733,13 @@ footer{
     }
 
     .photo picture{
-        width: 50%;
+        width: 70%;
     }
 
+    .photo picture img{
+        border: 1px solid #000000ad;
 
+    }
 
     /* work  */
     .product {
@@ -679,14 +753,29 @@ footer{
     }
 
     /* profile  */
+    .profile {
+        padding: 3%;
+    }
+    .grid span {
+        /* border-right: 1px solid rgb(90, 99, 103); */
+        height: 100%;
+        width: 30%;
+    }
     #profile .comment h3{
         font-size: 1.1rem;
     }
     #profile .left{
-        margin-top: 28px;
+        width: 30%;
+        margin-top: 45px;
+
     }
-
-
+    #profile img{
+        width: 50%;
+    }
+    #profile .right{
+        width: 70%;
+        margin-left: 5%;
+    }
 
     /* contact  */
     #contact{
