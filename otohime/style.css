@@ -23,7 +23,7 @@ body{
     cursor: pointer;
     transition: 0.8s ;
     position: relative;
-    border: 2px solid #009dff;
+    border: 2px solid #009dffbd;
     color: #ffffff;
 }
 
@@ -63,9 +63,10 @@ body{
 }
 
 #pause{
-    background-color: #ff0000b9;
+    background-color: #ff0000cd;
     width: 120px;
     height: 60px;
     border-radius: 10px;
     color: #ffffff;
+    border: 2px solid #db0000;
 }
