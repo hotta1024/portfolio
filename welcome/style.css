@@ -162,8 +162,8 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
-    height:50px;
+    width: 150px;
+    height:45px;
     border-radius: 50px;
     background-color: #009dff;
     box-shadow: 0 0px 100px #52bdff;
@@ -206,7 +206,7 @@ h2{
     height: 100%;
     border-radius: 50px;
     display: block;
-    line-height: 50px;
+    line-height: 45px;
     text-decoration-line: none;
     font-size: 1.2rem;
     font-weight: 500;
@@ -398,7 +398,7 @@ h2{
     width: 100%;
 }
 .grid span {
-    border-right: 1px solid rgb(90, 99, 103);
+    border-right: 3px solid rgba(90, 98, 103, 0.305);
     height: 100%;
     width: 30%;
 }
@@ -429,14 +429,14 @@ h2{
     object-fit: cover;
     border-radius: 50%;
     margin: 5% 0;
-    border: 1px solid #000;
+    border: 2px solid #2323234d;
 }
 
 #profile .comment{
     padding: 7%;
     background-color: #ffffffce;
     color: #000;
-    border: 1px solid rgba(90, 99, 103, 0.759);
+    border: 2px solid rgba(90, 99, 103, 0.299);
     text-align: left;
 }
 
@@ -499,19 +499,20 @@ h2{
     width: 100%;
     border: 1px solid #c8c8c8;
     padding: 10px;
+    margin-right: 5%;
 }
 
 #contact textarea{
     height: 10rem;
 }
 
-#contact .button{
+#contact .send{
     text-align: center;
     margin-top: 10px;
     font-size: 1.2rem;
 }
 
-#contact .button input[type="submit"]{
+#contact .send input[type="submit"]{
     background-color: #519fee;
     border: 1.5px solid #519fee;
     color: #fff;
@@ -525,7 +526,7 @@ h2{
     cursor: pointer;
 }
 
-#contact .button input:hover{
+#contact .send input:hover{
     background-color: #fff;
     box-shadow: none;
     transform: scale(0.95);
@@ -533,7 +534,7 @@ h2{
     background-color: #1c9ded;
 }
 
-#contact .button input:active {
+#contact .send input:active {
     box-shadow: none;
     transform: translateY(5px);
 }
